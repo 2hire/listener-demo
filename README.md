@@ -5,6 +5,10 @@
 ### Install dependencies
 
 	npm install
+
+### Compile schemas
+
+	npm run compile-schemas
 	
 ## Run
 
