@@ -1,5 +1,6 @@
 import fastify from 'fastify'
 import fastifyRawBody from "fastify-raw-body";
+import * as dotenv from "dotenv";
 
 // import json schemas as normal
 import QuerystringSchema from "./schemas/querystring.json";
@@ -15,10 +16,13 @@ import * as crypto from "crypto";
 
 const server = fastify()
 
+dotenv.config();
+
+export const SECRET = process.env.SECRET as string;
+
 const topicErrorMessage = "Topic Validation Error";
 const modeErrorMessage = "hub.mode must be 'subscribe'";
 const signatureErrorMessage = "Signature is not valid";
-const SECRET = "A secret of your choice";
 
 enum Algorithm {
     sha256 = "sha256",
