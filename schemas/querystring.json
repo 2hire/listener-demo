@@ -1,0 +1,11 @@
+{
+    "title": "Querystring Schema",
+    "type": "object",
+    "properties": {
+        "hub.mode": { "type": "string" },
+        "hub.topic": { "type": "string" },
+        "hub.challenge": { "type": "string" }
+    },
+    "additionalProperties": false,
+    "required": ["hub.mode", "hub.topic", "hub.challenge"]
+}
