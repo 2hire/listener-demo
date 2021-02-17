@@ -1,0 +1,12 @@
+{
+    "title": "Headers Schema",
+    "type": "object",
+    "properties": {
+        "X-Idempotency-Key": { "type": "string"},
+        "X-Hub-Signature": { "type": "string"},
+        "User-Agent": { "type": "string"},
+        "Content-Type": { "type": "string"}
+    },
+    "additionalProperties": false,
+    "required": ["X-Hub-Signature"]
+}

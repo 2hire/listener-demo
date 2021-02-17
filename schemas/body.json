@@ -1,0 +1,27 @@
+{
+    "title": "Body Schema",
+    "type": "object",
+    "properties": {
+        "topic": { "type": "string"},
+        "payload": { 
+            "type": "object",
+            "properties": {
+                "timestamp": { "type": "number" },
+                "deliveryTimestamp": { "type": "number" },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "latitude": { "type": "number" },
+                        "longitude": { "type": "number" },
+                        "meters": { "type": "number" },
+                        "online": { "type": "boolean" },
+                        "percentage": { "type": "number" }
+                    }
+                }
+            },
+            "required": ["timestamp", "data"]
+        }
+    },
+    "additionalProperties": false,
+    "required": ["topic", "payload"]
+}
